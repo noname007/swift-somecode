@@ -39,6 +39,7 @@ class ViewController: UIViewController {
             
         })
         
+                NSLog("%s | %d", #function, pthread_getconcurrency())
         isPlaying = true
     }
     
@@ -46,9 +47,10 @@ class ViewController: UIViewController {
     @IBAction func pauset(_ sender: AnyObject) {
         startButton.isEnabled = true
         pauseButton.isEnabled = false
-        timer.invalidate()
-        isPlaying = false
-    }
+        sleep(2)
+//        timer.invalidate()
+//        isPlaying = false
+                    NSLog("%s | %d", #function, pthread_getconcurrency())    }
     
     @IBAction func resetTimer(_ sender: AnyObject) {
         startButton.isEnabled = true
@@ -56,7 +58,7 @@ class ViewController: UIViewController {
         
         timer.invalidate()
         isPlaying = false
-        
+                NSLog("%s | %d", #function, pthread_getconcurrency())
         couter = 0.0
         timeLabel.text = String(couter)
     }

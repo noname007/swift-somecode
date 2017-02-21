@@ -87,7 +87,7 @@ struct NamesTable
 
 let namesTable = NamesTable(names: ["me","You","them"])
 
-let name = NamesTable[1]
+let name = namesTable[1]
 
 print("Nmae is \(name)")
 
